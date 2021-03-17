@@ -1,15 +1,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Fhc Trip" verbose="2">
-    <test name="Chrome ile test">
+<suite name="My Project Test Suite" verbose="2">
+    <test name="Test with Chrome">
         <parameter name="browser" value="chrome"></parameter>
         <packages>
-            <package name="com.techproed.crossbrowsertests"></package>
+            <package name="**"></package>
         </packages>
     </test>
-    <test name="Firefox ile test">
+    <test name="Test with Chrome">
         <parameter name="browser" value="firefox"></parameter>
         <packages>
-            <package name="com.techproed.crossbrowsertests"></package>
+            <package name="***"></package>
         </packages>
     </test>
 </suite>
