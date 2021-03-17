@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Resgression Suite 1" verbose="1">
+    <test name="Proje Regression 1">
+
+        <packages>
+            <!-- Tum package lerdaki  @Test annotation li tum methodlari calistirir ==> .*-->
+            <!-- Tum testleri ayni anda calistirmaya ==> "BATCH RUN" denir-->
+            <package name=".*"></package>
+
+        </packages>
+
+    </test>
+    
+</suite>
