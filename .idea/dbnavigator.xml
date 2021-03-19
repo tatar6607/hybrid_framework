@@ -23,16 +23,11 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="6ebb84ad-9cf0-466b-b4a9-789dd2426193">
-        <schema name="pg_catalog" object-types="view, function, table" />
-        <schema name="public" object-types="view, function, column, table" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="6ebb84ad-9cf0-466b-b4a9-789dd2426193">
-      <console name="Connection" type="STANDARD" schema="public" session="Main">select * 
+      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[select * 
 from suppliers
 join products
 on suppliers.supplier_id= products.supplier_id
@@ -57,7 +52,7 @@ where employee_id=1;
 
 select employee_id, first_name
 from employees
-where employee_id= 7;</console>
+where employee_id= 7;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
