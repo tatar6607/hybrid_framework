@@ -13,7 +13,7 @@ public class AlertsPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "(//a[@class='list-group-item'])[5] ")
+    @FindBy(xpath = "(//a[@class='list-group-item'])[5]")
     public WebElement alertPageLink;
 
     @FindBy(xpath = "//button[.='Click me!']")

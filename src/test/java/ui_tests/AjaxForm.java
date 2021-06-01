@@ -20,6 +20,7 @@ public class AjaxForm {
     AjaxFormPage ajaxFormPage;
     Actions actions;
     WebDriverWait wait;
+    Select select;
 
     {
         page1 = new UI01_Page();
@@ -57,7 +58,7 @@ public class AjaxForm {
     @Test
     public void jQuerySelectDown() {
         ajaxFormPage.jQueryLink.click();
-        Select select = new Select(ajaxFormPage.countrySelectMenu);
+        select = new Select(ajaxFormPage.countrySelectMenu);
         select.selectByValue("United States of America");
         Assert.assertEquals(select.getFirstSelectedOption().getText(), "United States of America");
 

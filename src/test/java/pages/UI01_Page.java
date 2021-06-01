@@ -1,7 +1,10 @@
 package pages;
 
+
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
@@ -13,7 +16,8 @@ public class UI01_Page {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "//a[@id='btn_basic_example']")
+
+    @FindBy(xpath = "/a[@id='btn_basic_example']")
     public WebElement startButton;
 
     @FindBy(xpath = "//a[.='No, thanks!']")

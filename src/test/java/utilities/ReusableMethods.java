@@ -76,6 +76,11 @@ public class ReusableMethods {
             e.printStackTrace();
         }
     }
+    public static Boolean waitForAttributeToBe(WebElement element, String attribute, String attributeValue) {
+        WebDriverWait wait  = new WebDriverWait(Driver.getDriver(), 10);
+         return  wait.until(ExpectedConditions.attributeToBe(element, attribute, attributeValue));
+
+    }
     public static WebElement waitForVisibility(WebElement element, int timeToWaitInSec) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeToWaitInSec);
         return wait.until(ExpectedConditions.visibilityOf(element));
@@ -119,4 +124,46 @@ public class ReusableMethods {
         });
         return element;
     }
+
+    // ========= JS METHODS =========== //
+
+    // CLICK WITH JS
+    public static void clickWithJS(WebElement element) {
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", element);
+    }
+
+    // SCROLL TO ELEMENT WITH JS
+    public static void scrollToElement(WebElement element) {
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
+    // SET ATTRIBUTE WITH JS
+    public static void setAttribute(WebElement element, String attributeName, String attributeValue) {
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);", element, attributeName, attributeValue);
+    }
+
+
+
+
+    // ===========  JS COMMAND EXECUTE  =========== //
+
+    // EXECUTES THE GIVEN JAVASCRIPT command on given web element
+    public static void executeJScommand(WebElement element, String command) {
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+        jse.executeScript(command, element);
+    }
+
+    public static void executeJScommand(String command) {
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+        jse.executeScript(command);
+    }
+
+    // Silinmeyen Texboxlari temizlemek icin ==> .clean() in daha guclusu
+    public static void cleanByJs(WebElement element) {
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+        jse.executeScript("arguments[0].value = '';", element);
+    }
+
+
 }

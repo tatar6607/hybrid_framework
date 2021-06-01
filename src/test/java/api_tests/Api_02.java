@@ -2,20 +2,12 @@ package api_tests;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.inject.spi.StaticInjectionRequest;
-import com.sun.xml.internal.ws.policy.AssertionSet;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.apache.http.protocol.ResponseServer;
 import org.junit.Test;
 import org.testng.Assert;
 import pojos.Money;
-import pojos.Rates;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 
